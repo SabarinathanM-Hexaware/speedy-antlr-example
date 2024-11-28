@@ -1444,6 +1444,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_program
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProgram" ):
+                return visitor.visitProgram(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1516,6 +1522,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_lineNumberStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLineNumberStatement" ):
+                return visitor.visitLineNumberStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1728,6 +1740,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_statement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatement" ):
+                return visitor.visitStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1982,6 +2000,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_label
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLabel" ):
+                return visitor.visitLabel(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2024,6 +2048,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_dataDefinition
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDataDefinition" ):
+                return visitor.visitDataDefinition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2117,6 +2147,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_compressStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCompressStatement" ):
+                return visitor.visitCompressStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2260,6 +2296,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_compressEnd
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCompressEnd" ):
+                return visitor.visitCompressEnd(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2388,6 +2430,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_inputStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInputStatement" ):
+                return visitor.visitInputStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2495,6 +2543,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_inputOptions
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInputOptions" ):
+                return visitor.visitInputOptions(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2552,6 +2606,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_inputUsingMap
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInputUsingMap" ):
+                return visitor.visitInputUsingMap(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2635,6 +2695,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_variable
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariable" ):
+                return visitor.visitVariable(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2738,6 +2804,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_reinputStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReinputStatement" ):
+                return visitor.visitReinputStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2857,6 +2929,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_reinputOptions
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReinputOptions" ):
+                return visitor.visitReinputOptions(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2953,6 +3031,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_sortStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSortStatement" ):
+                return visitor.visitSortStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3036,6 +3120,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_examineStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExamineStatement" ):
+                return visitor.visitExamineStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3188,6 +3278,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_examineOptions
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExamineOptions" ):
+                return visitor.visitExamineOptions(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3248,6 +3344,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_moveStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMoveStatement" ):
+                return visitor.visitMoveStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3402,6 +3504,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_moveOptions
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMoveOptions" ):
+                return visitor.visitMoveOptions(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3522,6 +3630,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_repeatStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRepeatStatement" ):
+                return visitor.visitRepeatStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3577,6 +3691,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_doStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDoStatement" ):
+                return visitor.visitDoStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3651,6 +3771,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_storeStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStoreStatement" ):
+                return visitor.visitStoreStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3856,6 +3982,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_storeCondition
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStoreCondition" ):
+                return visitor.visitStoreCondition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3981,6 +4113,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_findStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindStatement" ):
+                return visitor.visitFindStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4091,6 +4229,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_findOptions
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindOptions" ):
+                return visitor.visitFindOptions(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4318,6 +4462,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_findNumber
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFindNumber" ):
+                return visitor.visitFindNumber(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4516,6 +4666,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_readStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReadStatement" ):
+                return visitor.visitReadStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4642,6 +4798,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_updateStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUpdateStatement" ):
+                return visitor.visitUpdateStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4860,6 +5022,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_updateStartline
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUpdateStartline" ):
+                return visitor.visitUpdateStartline(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4969,6 +5137,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_deleteStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeleteStatement" ):
+                return visitor.visitDeleteStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5026,6 +5200,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_getStatements
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGetStatements" ):
+                return visitor.visitGetStatements(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5103,6 +5283,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_getTabledStatements
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGetTabledStatements" ):
+                return visitor.visitGetTabledStatements(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5178,6 +5364,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_getTabledOptions
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGetTabledOptions" ):
+                return visitor.visitGetTabledOptions(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5240,6 +5432,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_getTransactionStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGetTransactionStatement" ):
+                return visitor.visitGetTransactionStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5313,6 +5511,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_getSameStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGetSameStatement" ):
+                return visitor.visitGetSameStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5399,6 +5603,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_histogramStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitHistogramStatement" ):
+                return visitor.visitHistogramStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5622,6 +5832,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_histogramOptions
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitHistogramOptions" ):
+                return visitor.visitHistogramOptions(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5808,6 +6024,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_endTransaction
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEndTransaction" ):
+                return visitor.visitEndTransaction(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5840,6 +6062,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_backoutTransaction
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBackoutTransaction" ):
+                return visitor.visitBackoutTransaction(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5913,6 +6141,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_readworkfileStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReadworkfileStatement" ):
+                return visitor.visitReadworkfileStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6087,6 +6321,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_workfilenumberOption
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWorkfilenumberOption" ):
+                return visitor.visitWorkfilenumberOption(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6189,6 +6429,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_readworkfileOptions
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReadworkfileOptions" ):
+                return visitor.visitReadworkfileOptions(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6304,6 +6550,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_atEndOfFileStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAtEndOfFileStatement" ):
+                return visitor.visitAtEndOfFileStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6384,6 +6636,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_writeworkfileStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWriteworkfileStatement" ):
+                return visitor.visitWriteworkfileStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6489,6 +6747,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_closeworkfileStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCloseworkfileStatement" ):
+                return visitor.visitCloseworkfileStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6550,6 +6814,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_noRecordsFoundStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNoRecordsFoundStatement" ):
+                return visitor.visitNoRecordsFoundStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6634,6 +6904,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_atStartOfDataStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAtStartOfDataStatement" ):
+                return visitor.visitAtStartOfDataStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6747,6 +7023,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_formatStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFormatStatement" ):
+                return visitor.visitFormatStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6832,6 +7114,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_formatOptions
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFormatOptions" ):
+                return visitor.visitFormatOptions(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6905,6 +7193,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_assignmentStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssignmentStatement" ):
+                return visitor.visitAssignmentStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6962,6 +7256,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_includeStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIncludeStatement" ):
+                return visitor.visitIncludeStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7041,6 +7341,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_redefineStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRedefineStatement" ):
+                return visitor.visitRedefineStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7104,6 +7410,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_redefineBody
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRedefineBody" ):
+                return visitor.visitRedefineBody(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7178,6 +7490,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_resetStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitResetStatement" ):
+                return visitor.visitResetStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7249,6 +7567,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_callnatStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCallnatStatement" ):
+                return visitor.visitCallnatStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7341,6 +7665,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_setkeyStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSetkeyStatement" ):
+                return visitor.visitSetkeyStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7402,6 +7732,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_performStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPerformStatement" ):
+                return visitor.visitPerformStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7475,6 +7811,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_subroutineNames
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubroutineNames" ):
+                return visitor.visitSubroutineNames(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7551,6 +7893,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_fetchStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFetchStatement" ):
+                return visitor.visitFetchStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7678,6 +8026,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_callStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCallStatement" ):
+                return visitor.visitCallStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7812,6 +8166,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_forStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForStatement" ):
+                return visitor.visitForStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7882,6 +8242,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_acceptRejectIfStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAcceptRejectIfStatement" ):
+                return visitor.visitAcceptRejectIfStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7977,6 +8343,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_decisionStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDecisionStatement" ):
+                return visitor.visitDecisionStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8135,6 +8507,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_ifStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfStatement" ):
+                return visitor.visitIfStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8238,6 +8616,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_ifStructuredStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfStructuredStatement" ):
+                return visitor.visitIfStructuredStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8336,6 +8720,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_elseStructured
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElseStructured" ):
+                return visitor.visitElseStructured(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8418,6 +8808,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_ifElseStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfElseStatement" ):
+                return visitor.visitIfElseStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8591,6 +8987,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_ifMultilinedStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfMultilinedStatement" ):
+                return visitor.visitIfMultilinedStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8742,6 +9144,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_ifSinglelinedStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfSinglelinedStatement" ):
+                return visitor.visitIfSinglelinedStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8870,6 +9278,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_elseMultilinedStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElseMultilinedStatement" ):
+                return visitor.visitElseMultilinedStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8943,6 +9357,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_elseSinglelinedStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElseSinglelinedStatement" ):
+                return visitor.visitElseSinglelinedStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9015,6 +9435,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_onelinerBody
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOnelinerBody" ):
+                return visitor.visitOnelinerBody(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9142,6 +9568,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_condition
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCondition" ):
+                return visitor.visitCondition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9396,6 +9828,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_optionalCondition
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptionalCondition" ):
+                return visitor.visitOptionalCondition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9535,6 +9973,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_operand
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOperand" ):
+                return visitor.visitOperand(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9626,6 +10070,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_naturalKeywords
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNaturalKeywords" ):
+                return visitor.visitNaturalKeywords(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9711,6 +10161,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_logicalOp
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogicalOp" ):
+                return visitor.visitLogicalOp(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9771,6 +10227,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_subroutine
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubroutine" ):
+                return visitor.visitSubroutine(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9851,6 +10313,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_blockContentSubroutine
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlockContentSubroutine" ):
+                return visitor.visitBlockContentSubroutine(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10072,6 +10540,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_subroutineStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubroutineStatement" ):
+                return visitor.visitSubroutineStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10328,6 +10802,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_functionDefinition
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionDefinition" ):
+                return visitor.visitFunctionDefinition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10430,6 +10910,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_blockContent
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlockContent" ):
+                return visitor.visitBlockContent(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10544,6 +11030,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_valueAssignment
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitValueAssignment" ):
+                return visitor.visitValueAssignment(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10778,6 +11270,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_assignStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssignStatement" ):
+                return visitor.visitAssignStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10892,6 +11390,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_addOperation
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAddOperation" ):
+                return visitor.visitAddOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10953,6 +11457,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_multiplyOperation
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiplyOperation" ):
+                return visitor.visitMultiplyOperation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11016,6 +11526,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_subtractOperation
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubtractOperation" ):
+                return visitor.visitSubtractOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11077,6 +11593,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_divideOperation
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDivideOperation" ):
+                return visitor.visitDivideOperation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11163,6 +11685,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_computeOperation
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComputeOperation" ):
+                return visitor.visitComputeOperation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11382,6 +11910,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_arithmaticOperation
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArithmaticOperation" ):
+                return visitor.visitArithmaticOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11495,6 +12029,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_optionalCompute
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptionalCompute" ):
+                return visitor.visitOptionalCompute(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11575,6 +12115,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_calculations
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCalculations" ):
+                return visitor.visitCalculations(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11666,6 +12212,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_addContent
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAddContent" ):
+                return visitor.visitAddContent(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11738,6 +12290,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_compOp
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCompOp" ):
+                return visitor.visitCompOp(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11785,6 +12343,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_arithmaticOp
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArithmaticOp" ):
+                return visitor.visitArithmaticOp(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12167,6 +12731,12 @@ class NaturalParser ( Parser ):
         def getRuleIndex(self):
             return NaturalParser.RULE_endStatement
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEndStatement" ):
+                return visitor.visitEndStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12388,6 +12958,12 @@ class NaturalParser ( Parser ):
 
         def getRuleIndex(self):
             return NaturalParser.RULE_otherStatement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOtherStatement" ):
+                return visitor.visitOtherStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 

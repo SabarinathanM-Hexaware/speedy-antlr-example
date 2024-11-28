@@ -9,7 +9,7 @@ $antlr4 -Dlanguage=Cpp -visitor -no-listener -o cpp_src NaturalParser.g4
 
 # Generate Python target
 $antlr4 -Dlanguage=Python3 -o . NaturalLexer.g4
-$antlr4 -Dlanguage=Python3 -no-visitor -no-listener -o . NaturalParser.g4
+$antlr4 -Dlanguage=Python3 -visitor -no-listener -o . NaturalParser.g4
 
 # Run speedy-antlr-tool to generate parse accelerator
 python3 <<EOF
