@@ -24,14 +24,14 @@ def run_setup(with_binary):
         # Define an Extension object that describes the Antlr accelerator
         parser_ext = setuptools.Extension(
             # Extension name shall be at the same level as the sa_mygrammar_parser.py module
-            name='spam.parser.sa_mygrammar_cpp_parser',
+            name='natural.parser.sa_natural_cpp_parser',
 
             # Add the Antlr runtime source directory to the include search path
-            include_dirs=["src/spam/parser/cpp_src/antlr4-cpp-runtime"],
+            include_dirs=["src/natural/parser/cpp_src/antlr4-cpp-runtime"],
 
             # Rather than listing each C++ file (Antlr has a lot!), discover them automatically
-            sources=get_files("src/spam/parser/cpp_src", "*.cpp"),
-            depends=get_files("src/spam/parser/cpp_src", "*.h"),
+            sources=get_files("src/natural/parser/cpp_src", "*.cpp"),
+            depends=get_files("src/natural/parser/cpp_src", "*.h"),
 
             extra_compile_args=extra_compile_args.get(target, [])
         )
@@ -41,7 +41,7 @@ def run_setup(with_binary):
 
     # Define a package
     setuptools.setup (
-        name='spam',
+        name='natural',
         version='1.0.0',
         description='Example Speedy Antlr project',
         packages=setuptools.find_packages("src"),
