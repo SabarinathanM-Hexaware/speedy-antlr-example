@@ -2,5 +2,5 @@
 
 import natural
 
-natural.print_tree("input_file.txt")
-natural.benchmark("input_file.txt", 1000)
+# natural.print_tree("input_file.txt")
+natural.benchmark("TAM599F", 1)
