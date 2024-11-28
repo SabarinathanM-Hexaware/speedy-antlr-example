@@ -3,6 +3,8 @@
 **/.vscode
 **/*.o
 
+build/*
+dist/*
 *.egg-info/
 .eggs/
 .coverage
