@@ -7,8 +7,8 @@ from .parser import sa_natural
 
 def benchmark(input_file:str, count=100):
 
-    cpp_elapsed = timeit.timeit(lambda: sa_natural._cpp_parse(antlr4.FileStream(input_file), "root"), number=count)
-    py_elapsed = timeit.timeit(lambda: sa_natural._py_parse(antlr4.FileStream(input_file), "root"), number=count)
+    cpp_elapsed = timeit.timeit(lambda: sa_natural._cpp_parse(antlr4.FileStream(input_file), "program"), number=count)
+    py_elapsed = timeit.timeit(lambda: sa_natural._py_parse(antlr4.FileStream(input_file), "program"), number=count)
 
     py_elapsed = py_elapsed / count
     cpp_elapsed = cpp_elapsed / count

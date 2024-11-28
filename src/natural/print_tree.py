@@ -27,6 +27,6 @@ def print_tree(input_file:str):
 
     # Create an Antlr InputStream and parse it!
     stream = antlr4.FileStream(input_file)
-    tree = sa_natural.parse(stream, "root", sa_err_listener)
+    tree = sa_natural.parse(stream, "program", sa_err_listener)
 
     print(tree.toStringTree())
