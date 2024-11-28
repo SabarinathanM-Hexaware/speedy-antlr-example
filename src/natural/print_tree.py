@@ -1,9 +1,9 @@
 
 import antlr4
 
-from .parser import sa_mygrammar
+from .parser import sa_natural
 
-class ExampleErrorListener(sa_mygrammar.SA_ErrorListener):
+class ExampleErrorListener(sa_natural.SA_ErrorListener):
     def syntaxError(self, input_stream, offendingSymbol,
         char_index:int, line:int, column:int, msg:str
     ):
@@ -17,7 +17,7 @@ class ExampleErrorListener(sa_mygrammar.SA_ErrorListener):
 
 def print_tree(input_file:str):
 
-    if sa_mygrammar.USE_CPP_IMPLEMENTATION:
+    if sa_natural.USE_CPP_IMPLEMENTATION:
         print("Using C++ implementation of parser")
     else:
         print("Using Python implementation of parser")
@@ -27,6 +27,6 @@ def print_tree(input_file:str):
 
     # Create an Antlr InputStream and parse it!
     stream = antlr4.FileStream(input_file)
-    tree = sa_mygrammar.parse(stream, "root", sa_err_listener)
+    tree = sa_natural.parse(stream, "root", sa_err_listener)
 
     print(tree.toStringTree())
