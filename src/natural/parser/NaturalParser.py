@@ -1,4 +1,4 @@
-# Generated from NaturalParser.g4 by ANTLR 4.11.1
+# Generated from NaturalParser.g4 by ANTLR 4.13.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -1401,7 +1401,7 @@ class NaturalParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.11.1")
+        self.checkVersion("4.13.1")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -1491,7 +1491,7 @@ class NaturalParser ( Parser ):
                 self.state = 198 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0 or (((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0 or (((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0 or (((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0 or (((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0) or ((((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0) or ((((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0) or ((((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0)):
                     break
 
         except RecognitionException as re:
@@ -2207,7 +2207,7 @@ class NaturalParser ( Parser ):
                 self.state = 275 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==80 or (((_la - 263)) & ~0x3f) == 0 and ((1 << (_la - 263)) & 27787725) != 0):
+                if not (_la==80 or ((((_la - 263)) & ~0x3f) == 0 and ((1 << (_la - 263)) & 27787725) != 0)):
                     break
 
             self.state = 277
@@ -2219,7 +2219,7 @@ class NaturalParser ( Parser ):
                 if _alt==1:
                     self.state = 278
                     _la = self._input.LA(1)
-                    if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
+                    if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -2237,10 +2237,10 @@ class NaturalParser ( Parser ):
                 self.state = 288
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while (((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0:
+                while ((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
                     self.state = 285
                     _la = self._input.LA(1)
-                    if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
+                    if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -2561,7 +2561,7 @@ class NaturalParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 328
             _la = self._input.LA(1)
-            if not((((_la - 77)) & ~0x3f) == 0 and ((1 << (_la - 77)) & 274877906969) != 0):
+            if not(((((_la - 77)) & ~0x3f) == 0 and ((1 << (_la - 77)) & 274877906969) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -3296,7 +3296,7 @@ class NaturalParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 420
             _la = self._input.LA(1)
-            if not(((_la) & ~0x3f) == 0 and ((1 << _la) & 282574492532736) != 0 or (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 26388027465729) != 0 or _la==250):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 282574492532736) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 26388027465729) != 0) or _la==250):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -3651,7 +3651,7 @@ class NaturalParser ( Parser ):
             self.state = 466
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0 or (((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0 or (((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0 or (((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0 or (((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0:
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0) or ((((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0) or ((((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0) or ((((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0):
                 self.state = 463
                 self.statement()
                 self.state = 468
@@ -3713,7 +3713,7 @@ class NaturalParser ( Parser ):
             self.state = 475
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0 or (((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0 or (((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0 or (((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0 or (((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0:
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0) or ((((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0) or ((((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0) or ((((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0):
                 self.state = 472
                 self.statement()
                 self.state = 477
@@ -5458,7 +5458,7 @@ class NaturalParser ( Parser ):
                 if _alt == 1:
                     self.state = 747
                     _la = self._input.LA(1)
-                    if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6815745) != 0):
+                    if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6815745) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -5627,7 +5627,7 @@ class NaturalParser ( Parser ):
             self.state = 774
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0 or (((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0 or (((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0 or (((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0 or (((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0:
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0) or ((((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0) or ((((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0) or ((((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0):
                 self.state = 771
                 self.statement()
                 self.state = 776
@@ -7215,7 +7215,7 @@ class NaturalParser ( Parser ):
             self.compOp()
             self.state = 983
             _la = self._input.LA(1)
-            if not((((_la - 218)) & ~0x3f) == 0 and ((1 << (_la - 218)) & 140737488355331) != 0 or _la==284):
+            if not(((((_la - 218)) & ~0x3f) == 0 and ((1 << (_la - 218)) & 140737488355331) != 0) or _la==284):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -7945,10 +7945,10 @@ class NaturalParser ( Parser ):
                     self.state = 1079
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while (((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0:
+                    while ((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
                         self.state = 1076
                         _la = self._input.LA(1)
-                        if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
+                        if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0)):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -8089,10 +8089,10 @@ class NaturalParser ( Parser ):
                     self.state = 1106
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while (((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0:
+                    while ((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
                         self.state = 1103
                         _la = self._input.LA(1)
-                        if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
+                        if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0)):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -8197,7 +8197,7 @@ class NaturalParser ( Parser ):
             self.state = 1126
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0 or (((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0 or (((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0 or (((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0 or (((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0:
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0) or ((((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0) or ((((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0) or ((((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0):
                 self.state = 1123
                 self.statement()
                 self.state = 1128
@@ -8645,7 +8645,7 @@ class NaturalParser ( Parser ):
                 if _alt==1:
                     self.state = 1186
                     _la = self._input.LA(1)
-                    if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
+                    if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -8671,7 +8671,7 @@ class NaturalParser ( Parser ):
                 self.state = 1198 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0 or (((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0 or (((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0 or (((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0 or (((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0) or ((((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0) or ((((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0) or ((((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0)):
                     break
 
             self.state = 1202
@@ -8741,7 +8741,7 @@ class NaturalParser ( Parser ):
             self.state = 1208
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0 or (((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0 or (((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0 or (((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0 or (((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0:
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & -12885270530) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & -1) != 0) or ((((_la - 129)) & ~0x3f) == 0 and ((1 << (_la - 129)) & -1) != 0) or ((((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & -16385) != 0) or ((((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & 140737488355327) != 0):
                 self.state = 1205
                 self.statement()
                 self.state = 1210
@@ -9012,10 +9012,10 @@ class NaturalParser ( Parser ):
             self.state = 1254
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0:
+            while ((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
                 self.state = 1251
                 _la = self._input.LA(1)
-                if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
+                if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -9029,10 +9029,10 @@ class NaturalParser ( Parser ):
             self.state = 1261
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0:
+            while ((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
                 self.state = 1258
                 _la = self._input.LA(1)
-                if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
+                if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -9173,7 +9173,7 @@ class NaturalParser ( Parser ):
                 if _alt==1:
                     self.state = 1281
                     _la = self._input.LA(1)
-                    if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
+                    if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -9197,7 +9197,7 @@ class NaturalParser ( Parser ):
                 if _alt==1:
                     self.state = 1290
                     _la = self._input.LA(1)
-                    if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
+                    if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -9215,10 +9215,10 @@ class NaturalParser ( Parser ):
                 self.state = 1300
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while (((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0:
+                while ((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
                     self.state = 1297
                     _la = self._input.LA(1)
-                    if not((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0):
+                    if not(((((_la - 265)) & ~0x3f) == 0 and ((1 << (_la - 265)) & 6291457) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -10179,7 +10179,7 @@ class NaturalParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 1455
             _la = self._input.LA(1)
-            if not((((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 13194139541503) != 0):
+            if not(((((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 13194139541503) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -12230,7 +12230,7 @@ class NaturalParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 1791
             _la = self._input.LA(1)
-            if not(_la==49 or _la==96 or _la==124 or (((_la - 263)) & ~0x3f) == 0 and ((1 << (_la - 263)) & 10485789) != 0):
+            if not(_la==49 or _la==96 or _la==124 or ((((_la - 263)) & ~0x3f) == 0 and ((1 << (_la - 263)) & 10485789) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -12308,7 +12308,7 @@ class NaturalParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 1793
             _la = self._input.LA(1)
-            if not((((_la - 244)) & ~0x3f) == 0 and ((1 << (_la - 244)) & 270582939711) != 0):
+            if not(((((_la - 244)) & ~0x3f) == 0 and ((1 << (_la - 244)) & 270582939711) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -12362,7 +12362,7 @@ class NaturalParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 1795
             _la = self._input.LA(1)
-            if not((((_la - 272)) & ~0x3f) == 0 and ((1 << (_la - 272)) & 15) != 0):
+            if not(((((_la - 272)) & ~0x3f) == 0 and ((1 << (_la - 272)) & 15) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -12749,7 +12749,7 @@ class NaturalParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 1797
             _la = self._input.LA(1)
-            if not(((_la) & ~0x3f) == 0 and ((1 << _la) & 3498452474803539712) != 0 or (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & 6919640090553618905) != 0 or (((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -2305843019011588099) != 0 or (((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & 33585661) != 0):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 3498452474803539712) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & 6919640090553618905) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -2305843019011588099) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & 33585661) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -12982,7 +12982,7 @@ class NaturalParser ( Parser ):
                 if _alt == 1+1:
                     self.state = 1799
                     _la = self._input.LA(1)
-                    if _la <= 0 or ((_la) & ~0x3f) == 0 and ((1 << _la) & -9183821663005448448) != 0 or (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & 4177) != 0 or (((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & 2251799813734401) != 0 or (((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & 12289) != 0:
+                    if _la <= 0 or (((_la) & ~0x3f) == 0 and ((1 << _la) & -9183821663005448448) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & 4177) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & 2251799813734401) != 0) or ((((_la - 194)) & ~0x3f) == 0 and ((1 << (_la - 194)) & 12289) != 0):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)

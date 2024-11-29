@@ -1,5 +1,5 @@
 
-// Generated from NaturalLexer.g4 by ANTLR 4.11.1
+// Generated from NaturalLexer.g4 by ANTLR 4.13.1
 
 
 #include "NaturalLexer.h"
@@ -42,10 +42,19 @@ struct NaturalLexerStaticData final {
 };
 
 ::antlr4::internal::OnceFlag naturallexerLexerOnceFlag;
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+static thread_local
+#endif
 NaturalLexerStaticData *naturallexerLexerStaticData = nullptr;
 
 void naturallexerLexerInitialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  if (naturallexerLexerStaticData != nullptr) {
+    return;
+  }
+#else
   assert(naturallexerLexerStaticData == nullptr);
+#endif
   auto staticData = std::make_unique<NaturalLexerStaticData>(
     std::vector<std::string>{
       "DEFINE", "FUNCTION", "RETURNS", "DATA", "LOCAL", "GLOBAL", "PARAMETER", 
@@ -1407,5 +1416,9 @@ const atn::ATN& NaturalLexer::getATN() const {
 
 
 void NaturalLexer::initialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  naturallexerLexerInitialize();
+#else
   ::antlr4::internal::call_once(naturallexerLexerOnceFlag, naturallexerLexerInitialize);
+#endif
 }

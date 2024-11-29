@@ -1,5 +1,5 @@
 
-// Generated from NaturalLexer.g4 by ANTLR 4.11.1
+// Generated from NaturalLexer.g4 by ANTLR 4.13.1
 
 #pragma once
 

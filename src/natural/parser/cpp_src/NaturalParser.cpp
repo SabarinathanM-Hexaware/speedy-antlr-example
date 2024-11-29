@@ -1,5 +1,5 @@
 
-// Generated from NaturalParser.g4 by ANTLR 4.11.1
+// Generated from NaturalParser.g4 by ANTLR 4.13.1
 
 
 #include "NaturalParserVisitor.h"
@@ -37,10 +37,19 @@ struct NaturalParserStaticData final {
 };
 
 ::antlr4::internal::OnceFlag naturalparserParserOnceFlag;
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+static thread_local
+#endif
 NaturalParserStaticData *naturalparserParserStaticData = nullptr;
 
 void naturalparserParserInitialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  if (naturalparserParserStaticData != nullptr) {
+    return;
+  }
+#else
   assert(naturalparserParserStaticData == nullptr);
+#endif
   auto staticData = std::make_unique<NaturalParserStaticData>(
     std::vector<std::string>{
       "program", "lineNumberStatement", "statement", "label", "dataDefinition", 
@@ -1078,12 +1087,12 @@ NaturalParser::ProgramContext* NaturalParser::program() {
       setState(198); 
       _errHandler->sync(this);
       _la = _input->LA(1);
-    } while (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -12885270530) != 0 || (((_la - 65) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 65)) & -1) != 0 || (((_la - 129) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 129)) & -1) != 0 || (((_la - 193) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 193)) & -16385) != 0 || (((_la - 257) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 257)) & 140737488355327) != 0);
+    } while ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -12885270530) != 0) || ((((_la - 65) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 65)) & -1) != 0) || ((((_la - 129) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 129)) & -1) != 0) || ((((_la - 193) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 193)) & -16385) != 0) || ((((_la - 257) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 257)) & 140737488355327) != 0));
    
   }
   catch (RecognitionException &e) {
@@ -1938,8 +1947,8 @@ NaturalParser::CompressStatementContext* NaturalParser::compressStatement() {
       setState(275); 
       _errHandler->sync(this);
       _la = _input->LA(1);
-    } while (_la == NaturalParser::POSITION || (((_la - 263) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 263)) & 27787725) != 0);
+    } while (_la == NaturalParser::POSITION || ((((_la - 263) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 263)) & 27787725) != 0));
     setState(277);
     match(NaturalParser::INTO);
     setState(281);
@@ -1949,8 +1958,8 @@ NaturalParser::CompressStatementContext* NaturalParser::compressStatement() {
       if (alt == 1) {
         setState(278);
         _la = _input->LA(1);
-        if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-          ((1ULL << (_la - 265)) & 6291457) != 0)) {
+        if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+          ((1ULL << (_la - 265)) & 6291457) != 0))) {
         _errHandler->recoverInline(this);
         }
         else {
@@ -1972,12 +1981,12 @@ NaturalParser::CompressStatementContext* NaturalParser::compressStatement() {
       setState(288);
       _errHandler->sync(this);
       _la = _input->LA(1);
-      while ((((_la - 265) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 265)) & 6291457) != 0) {
+      while (((((_la - 265) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 265)) & 6291457) != 0)) {
         setState(285);
         _la = _input->LA(1);
-        if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-          ((1ULL << (_la - 265)) & 6291457) != 0)) {
+        if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+          ((1ULL << (_la - 265)) & 6291457) != 0))) {
         _errHandler->recoverInline(this);
         }
         else {
@@ -2388,8 +2397,8 @@ NaturalParser::InputOptionsContext* NaturalParser::inputOptions() {
     enterOuterAlt(_localctx, 1);
     setState(328);
     _la = _input->LA(1);
-    if (!((((_la - 77) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 77)) & 274877906969) != 0)) {
+    if (!(((((_la - 77) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 77)) & 274877906969) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -3348,9 +3357,9 @@ NaturalParser::ExamineOptionsContext* NaturalParser::examineOptions() {
     enterOuterAlt(_localctx, 1);
     setState(420);
     _la = _input->LA(1);
-    if (!(((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 282574492532736) != 0 || (((_la - 66) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 66)) & 26388027465729) != 0 || _la == NaturalParser::AND_TEXT)) {
+    if (!((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 282574492532736) != 0) || ((((_la - 66) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 66)) & 26388027465729) != 0) || _la == NaturalParser::AND_TEXT)) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -3862,12 +3871,12 @@ NaturalParser::RepeatStatementContext* NaturalParser::repeatStatement() {
     setState(466);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -12885270530) != 0 || (((_la - 65) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 65)) & -1) != 0 || (((_la - 129) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 129)) & -1) != 0 || (((_la - 193) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 193)) & -16385) != 0 || (((_la - 257) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 257)) & 140737488355327) != 0) {
+    while ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -12885270530) != 0) || ((((_la - 65) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 65)) & -1) != 0) || ((((_la - 129) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 129)) & -1) != 0) || ((((_la - 193) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 193)) & -16385) != 0) || ((((_la - 257) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 257)) & 140737488355327) != 0)) {
       setState(463);
       statement();
       setState(468);
@@ -3941,12 +3950,12 @@ NaturalParser::DoStatementContext* NaturalParser::doStatement() {
     setState(475);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -12885270530) != 0 || (((_la - 65) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 65)) & -1) != 0 || (((_la - 129) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 129)) & -1) != 0 || (((_la - 193) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 193)) & -16385) != 0 || (((_la - 257) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 257)) & 140737488355327) != 0) {
+    while ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -12885270530) != 0) || ((((_la - 65) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 65)) & -1) != 0) || ((((_la - 129) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 129)) & -1) != 0) || ((((_la - 193) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 193)) & -16385) != 0) || ((((_la - 257) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 257)) & 140737488355327) != 0)) {
       setState(472);
       statement();
       setState(477);
@@ -6143,8 +6152,8 @@ NaturalParser::GetTransactionStatementContext* NaturalParser::getTransactionStat
         case 1: {
               setState(747);
               _la = _input->LA(1);
-              if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-                ((1ULL << (_la - 265)) & 6815745) != 0)) {
+              if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+                ((1ULL << (_la - 265)) & 6815745) != 0))) {
               _errHandler->recoverInline(this);
               }
               else {
@@ -6356,12 +6365,12 @@ NaturalParser::HistogramStatementContext* NaturalParser::histogramStatement() {
     setState(774);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -12885270530) != 0 || (((_la - 65) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 65)) & -1) != 0 || (((_la - 129) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 129)) & -1) != 0 || (((_la - 193) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 193)) & -16385) != 0 || (((_la - 257) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 257)) & 140737488355327) != 0) {
+    while ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -12885270530) != 0) || ((((_la - 65) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 65)) & -1) != 0) || ((((_la - 129) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 129)) & -1) != 0) || ((((_la - 193) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 193)) & -16385) != 0) || ((((_la - 257) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 257)) & 140737488355327) != 0)) {
       setState(771);
       statement();
       setState(776);
@@ -8377,8 +8386,8 @@ NaturalParser::AssignmentStatementContext* NaturalParser::assignmentStatement() 
     compOp();
     setState(983);
     _la = _input->LA(1);
-    if (!((((_la - 218) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 218)) & 140737488355331) != 0 || _la == NaturalParser::IDENTIFIER)) {
+    if (!(((((_la - 218) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 218)) & 140737488355331) != 0) || _la == NaturalParser::IDENTIFIER)) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -9311,12 +9320,12 @@ NaturalParser::FetchStatementContext* NaturalParser::fetchStatement() {
         setState(1079);
         _errHandler->sync(this);
         _la = _input->LA(1);
-        while ((((_la - 265) & ~ 0x3fULL) == 0) &&
-          ((1ULL << (_la - 265)) & 6291457) != 0) {
+        while (((((_la - 265) & ~ 0x3fULL) == 0) &&
+          ((1ULL << (_la - 265)) & 6291457) != 0)) {
           setState(1076);
           _la = _input->LA(1);
-          if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-            ((1ULL << (_la - 265)) & 6291457) != 0)) {
+          if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+            ((1ULL << (_la - 265)) & 6291457) != 0))) {
           _errHandler->recoverInline(this);
           }
           else {
@@ -9496,12 +9505,12 @@ NaturalParser::CallStatementContext* NaturalParser::callStatement() {
         setState(1106);
         _errHandler->sync(this);
         _la = _input->LA(1);
-        while ((((_la - 265) & ~ 0x3fULL) == 0) &&
-          ((1ULL << (_la - 265)) & 6291457) != 0) {
+        while (((((_la - 265) & ~ 0x3fULL) == 0) &&
+          ((1ULL << (_la - 265)) & 6291457) != 0)) {
           setState(1103);
           _la = _input->LA(1);
-          if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-            ((1ULL << (_la - 265)) & 6291457) != 0)) {
+          if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+            ((1ULL << (_la - 265)) & 6291457) != 0))) {
           _errHandler->recoverInline(this);
           }
           else {
@@ -9629,12 +9638,12 @@ NaturalParser::ForStatementContext* NaturalParser::forStatement() {
     setState(1126);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -12885270530) != 0 || (((_la - 65) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 65)) & -1) != 0 || (((_la - 129) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 129)) & -1) != 0 || (((_la - 193) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 193)) & -16385) != 0 || (((_la - 257) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 257)) & 140737488355327) != 0) {
+    while ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -12885270530) != 0) || ((((_la - 65) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 65)) & -1) != 0) || ((((_la - 129) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 129)) & -1) != 0) || ((((_la - 193) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 193)) & -16385) != 0) || ((((_la - 257) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 257)) & 140737488355327) != 0)) {
       setState(1123);
       statement();
       setState(1128);
@@ -10193,8 +10202,8 @@ NaturalParser::IfStructuredStatementContext* NaturalParser::ifStructuredStatemen
       if (alt == 1) {
         setState(1186);
         _la = _input->LA(1);
-        if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-          ((1ULL << (_la - 265)) & 6291457) != 0)) {
+        if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+          ((1ULL << (_la - 265)) & 6291457) != 0))) {
         _errHandler->recoverInline(this);
         }
         else {
@@ -10223,12 +10232,12 @@ NaturalParser::IfStructuredStatementContext* NaturalParser::ifStructuredStatemen
       setState(1198); 
       _errHandler->sync(this);
       _la = _input->LA(1);
-    } while (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -12885270530) != 0 || (((_la - 65) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 65)) & -1) != 0 || (((_la - 129) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 129)) & -1) != 0 || (((_la - 193) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 193)) & -16385) != 0 || (((_la - 257) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 257)) & 140737488355327) != 0);
+    } while ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -12885270530) != 0) || ((((_la - 65) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 65)) & -1) != 0) || ((((_la - 129) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 129)) & -1) != 0) || ((((_la - 193) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 193)) & -16385) != 0) || ((((_la - 257) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 257)) & 140737488355327) != 0));
     setState(1202);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
@@ -10312,12 +10321,12 @@ NaturalParser::ElseStructuredContext* NaturalParser::elseStructured() {
     setState(1208);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -12885270530) != 0 || (((_la - 65) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 65)) & -1) != 0 || (((_la - 129) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 129)) & -1) != 0 || (((_la - 193) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 193)) & -16385) != 0 || (((_la - 257) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 257)) & 140737488355327) != 0) {
+    while ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -12885270530) != 0) || ((((_la - 65) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 65)) & -1) != 0) || ((((_la - 129) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 129)) & -1) != 0) || ((((_la - 193) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 193)) & -16385) != 0) || ((((_la - 257) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 257)) & 140737488355327) != 0)) {
       setState(1205);
       statement();
       setState(1210);
@@ -10641,12 +10650,12 @@ NaturalParser::IfMultilinedStatementContext* NaturalParser::ifMultilinedStatemen
     setState(1254);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while ((((_la - 265) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 265)) & 6291457) != 0) {
+    while (((((_la - 265) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 265)) & 6291457) != 0)) {
       setState(1251);
       _la = _input->LA(1);
-      if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 265)) & 6291457) != 0)) {
+      if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 265)) & 6291457) != 0))) {
       _errHandler->recoverInline(this);
       }
       else {
@@ -10662,12 +10671,12 @@ NaturalParser::IfMultilinedStatementContext* NaturalParser::ifMultilinedStatemen
     setState(1261);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while ((((_la - 265) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 265)) & 6291457) != 0) {
+    while (((((_la - 265) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 265)) & 6291457) != 0)) {
       setState(1258);
       _la = _input->LA(1);
-      if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 265)) & 6291457) != 0)) {
+      if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 265)) & 6291457) != 0))) {
       _errHandler->recoverInline(this);
       }
       else {
@@ -10841,8 +10850,8 @@ NaturalParser::IfSinglelinedStatementContext* NaturalParser::ifSinglelinedStatem
       if (alt == 1) {
         setState(1281);
         _la = _input->LA(1);
-        if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-          ((1ULL << (_la - 265)) & 6291457) != 0)) {
+        if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+          ((1ULL << (_la - 265)) & 6291457) != 0))) {
         _errHandler->recoverInline(this);
         }
         else {
@@ -10869,8 +10878,8 @@ NaturalParser::IfSinglelinedStatementContext* NaturalParser::ifSinglelinedStatem
       if (alt == 1) {
         setState(1290);
         _la = _input->LA(1);
-        if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-          ((1ULL << (_la - 265)) & 6291457) != 0)) {
+        if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+          ((1ULL << (_la - 265)) & 6291457) != 0))) {
         _errHandler->recoverInline(this);
         }
         else {
@@ -10892,12 +10901,12 @@ NaturalParser::IfSinglelinedStatementContext* NaturalParser::ifSinglelinedStatem
       setState(1300);
       _errHandler->sync(this);
       _la = _input->LA(1);
-      while ((((_la - 265) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 265)) & 6291457) != 0) {
+      while (((((_la - 265) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 265)) & 6291457) != 0)) {
         setState(1297);
         _la = _input->LA(1);
-        if (!((((_la - 265) & ~ 0x3fULL) == 0) &&
-          ((1ULL << (_la - 265)) & 6291457) != 0)) {
+        if (!(((((_la - 265) & ~ 0x3fULL) == 0) &&
+          ((1ULL << (_la - 265)) & 6291457) != 0))) {
         _errHandler->recoverInline(this);
         }
         else {
@@ -12202,8 +12211,8 @@ NaturalParser::LogicalOpContext* NaturalParser::logicalOp() {
     enterOuterAlt(_localctx, 1);
     setState(1455);
     _la = _input->LA(1);
-    if (!((((_la - 250) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 250)) & 13194139541503) != 0)) {
+    if (!(((((_la - 250) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 250)) & 13194139541503) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -14746,8 +14755,8 @@ NaturalParser::AddContentContext* NaturalParser::addContent() {
     _la = _input->LA(1);
     if (!(_la == NaturalParser::TO || _la == NaturalParser::GIVING
 
-    || _la == NaturalParser::ROUNDED || (((_la - 263) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 263)) & 10485789) != 0)) {
+    || _la == NaturalParser::ROUNDED || ((((_la - 263) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 263)) & 10485789) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -14848,8 +14857,8 @@ NaturalParser::CompOpContext* NaturalParser::compOp() {
     enterOuterAlt(_localctx, 1);
     setState(1793);
     _la = _input->LA(1);
-    if (!((((_la - 244) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 244)) & 270582939711) != 0)) {
+    if (!(((((_la - 244) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 244)) & 270582939711) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -14918,8 +14927,8 @@ NaturalParser::ArithmaticOpContext* NaturalParser::arithmaticOp() {
     enterOuterAlt(_localctx, 1);
     setState(1795);
     _la = _input->LA(1);
-    if (!((((_la - 272) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 272)) & 15) != 0)) {
+    if (!(((((_la - 272) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 272)) & 15) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -15432,11 +15441,11 @@ NaturalParser::EndStatementContext* NaturalParser::endStatement() {
     enterOuterAlt(_localctx, 1);
     setState(1797);
     _la = _input->LA(1);
-    if (!(((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 3498452474803539712) != 0 || (((_la - 64) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 64)) & 6919640090553618905) != 0 || (((_la - 128) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 128)) & -2305843019011588099) != 0 || (((_la - 192) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 192)) & 33585661) != 0)) {
+    if (!((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 3498452474803539712) != 0) || ((((_la - 64) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 64)) & 6919640090553618905) != 0) || ((((_la - 128) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 128)) & -2305843019011588099) != 0) || ((((_la - 192) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 192)) & 33585661) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -15744,11 +15753,11 @@ NaturalParser::OtherStatementContext* NaturalParser::otherStatement() {
         case 1 + 1: {
               setState(1799);
               _la = _input->LA(1);
-              if (_la == 0 || _la == Token::EOF || (((_la & ~ 0x3fULL) == 0) &&
-                ((1ULL << _la) & -9183821663005448448) != 0 || (((_la - 64) & ~ 0x3fULL) == 0) &&
-                ((1ULL << (_la - 64)) & 4177) != 0 || (((_la - 128) & ~ 0x3fULL) == 0) &&
-                ((1ULL << (_la - 128)) & 2251799813734401) != 0 || (((_la - 194) & ~ 0x3fULL) == 0) &&
-                ((1ULL << (_la - 194)) & 12289) != 0)) {
+              if (_la == 0 || _la == Token::EOF || ((((_la & ~ 0x3fULL) == 0) &&
+                ((1ULL << _la) & -9183821663005448448) != 0) || ((((_la - 64) & ~ 0x3fULL) == 0) &&
+                ((1ULL << (_la - 64)) & 4177) != 0) || ((((_la - 128) & ~ 0x3fULL) == 0) &&
+                ((1ULL << (_la - 128)) & 2251799813734401) != 0) || ((((_la - 194) & ~ 0x3fULL) == 0) &&
+                ((1ULL << (_la - 194)) & 12289) != 0))) {
               _errHandler->recoverInline(this);
               }
               else {
@@ -15777,5 +15786,9 @@ NaturalParser::OtherStatementContext* NaturalParser::otherStatement() {
 }
 
 void NaturalParser::initialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  naturalparserParserInitialize();
+#else
   ::antlr4::internal::call_once(naturalparserParserOnceFlag, naturalparserParserInitialize);
+#endif
 }
