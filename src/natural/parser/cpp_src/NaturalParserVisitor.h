@@ -61,15 +61,27 @@ public:
 
     virtual std::any visitStoreStatement(NaturalParser::StoreStatementContext *context) = 0;
 
+    virtual std::any visitStorePreview2(NaturalParser::StorePreview2Context *context) = 0;
+
     virtual std::any visitStoreCondition(NaturalParser::StoreConditionContext *context) = 0;
 
     virtual std::any visitFindStatement(NaturalParser::FindStatementContext *context) = 0;
 
-    virtual std::any visitFindOptions(NaturalParser::FindOptionsContext *context) = 0;
+    virtual std::any visitFindQuery(NaturalParser::FindQueryContext *context) = 0;
 
     virtual std::any visitFindNumber(NaturalParser::FindNumberContext *context) = 0;
 
+    virtual std::any visitFindPreview1(NaturalParser::FindPreview1Context *context) = 0;
+
+    virtual std::any visitFindPreview2(NaturalParser::FindPreview2Context *context) = 0;
+
     virtual std::any visitReadStatement(NaturalParser::ReadStatementContext *context) = 0;
+
+    virtual std::any visitReadQuery(NaturalParser::ReadQueryContext *context) = 0;
+
+    virtual std::any visitReadPreview1(NaturalParser::ReadPreview1Context *context) = 0;
+
+    virtual std::any visitReadPreview2(NaturalParser::ReadPreview2Context *context) = 0;
 
     virtual std::any visitUpdateStatement(NaturalParser::UpdateStatementContext *context) = 0;
 
@@ -88,6 +100,10 @@ public:
     virtual std::any visitGetSameStatement(NaturalParser::GetSameStatementContext *context) = 0;
 
     virtual std::any visitHistogramStatement(NaturalParser::HistogramStatementContext *context) = 0;
+
+    virtual std::any visitHistogramQuery(NaturalParser::HistogramQueryContext *context) = 0;
+
+    virtual std::any visitHistogramPreview(NaturalParser::HistogramPreviewContext *context) = 0;
 
     virtual std::any visitHistogramOptions(NaturalParser::HistogramOptionsContext *context) = 0;
 

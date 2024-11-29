@@ -33,11 +33,17 @@ class SA_NaturalTranslator : public NaturalParserBaseVisitor {
     PyObject *RepeatStatementContext_cls = NULL;
     PyObject *DoStatementContext_cls = NULL;
     PyObject *StoreStatementContext_cls = NULL;
+    PyObject *StorePreview2Context_cls = NULL;
     PyObject *StoreConditionContext_cls = NULL;
     PyObject *FindStatementContext_cls = NULL;
-    PyObject *FindOptionsContext_cls = NULL;
+    PyObject *FindQueryContext_cls = NULL;
     PyObject *FindNumberContext_cls = NULL;
+    PyObject *FindPreview1Context_cls = NULL;
+    PyObject *FindPreview2Context_cls = NULL;
     PyObject *ReadStatementContext_cls = NULL;
+    PyObject *ReadQueryContext_cls = NULL;
+    PyObject *ReadPreview1Context_cls = NULL;
+    PyObject *ReadPreview2Context_cls = NULL;
     PyObject *UpdateStatementContext_cls = NULL;
     PyObject *UpdateStartlineContext_cls = NULL;
     PyObject *DeleteStatementContext_cls = NULL;
@@ -47,6 +53,8 @@ class SA_NaturalTranslator : public NaturalParserBaseVisitor {
     PyObject *GetTransactionStatementContext_cls = NULL;
     PyObject *GetSameStatementContext_cls = NULL;
     PyObject *HistogramStatementContext_cls = NULL;
+    PyObject *HistogramQueryContext_cls = NULL;
+    PyObject *HistogramPreviewContext_cls = NULL;
     PyObject *HistogramOptionsContext_cls = NULL;
     PyObject *EndTransactionContext_cls = NULL;
     PyObject *BackoutTransactionContext_cls = NULL;
@@ -154,15 +162,27 @@ class SA_NaturalTranslator : public NaturalParserBaseVisitor {
 
     antlrcpp::Any visitStoreStatement(NaturalParser::StoreStatementContext *ctx);
 
+    antlrcpp::Any visitStorePreview2(NaturalParser::StorePreview2Context *ctx);
+
     antlrcpp::Any visitStoreCondition(NaturalParser::StoreConditionContext *ctx);
 
     antlrcpp::Any visitFindStatement(NaturalParser::FindStatementContext *ctx);
 
-    antlrcpp::Any visitFindOptions(NaturalParser::FindOptionsContext *ctx);
+    antlrcpp::Any visitFindQuery(NaturalParser::FindQueryContext *ctx);
 
     antlrcpp::Any visitFindNumber(NaturalParser::FindNumberContext *ctx);
 
+    antlrcpp::Any visitFindPreview1(NaturalParser::FindPreview1Context *ctx);
+
+    antlrcpp::Any visitFindPreview2(NaturalParser::FindPreview2Context *ctx);
+
     antlrcpp::Any visitReadStatement(NaturalParser::ReadStatementContext *ctx);
+
+    antlrcpp::Any visitReadQuery(NaturalParser::ReadQueryContext *ctx);
+
+    antlrcpp::Any visitReadPreview1(NaturalParser::ReadPreview1Context *ctx);
+
+    antlrcpp::Any visitReadPreview2(NaturalParser::ReadPreview2Context *ctx);
 
     antlrcpp::Any visitUpdateStatement(NaturalParser::UpdateStatementContext *ctx);
 
@@ -181,6 +201,10 @@ class SA_NaturalTranslator : public NaturalParserBaseVisitor {
     antlrcpp::Any visitGetSameStatement(NaturalParser::GetSameStatementContext *ctx);
 
     antlrcpp::Any visitHistogramStatement(NaturalParser::HistogramStatementContext *ctx);
+
+    antlrcpp::Any visitHistogramQuery(NaturalParser::HistogramQueryContext *ctx);
+
+    antlrcpp::Any visitHistogramPreview(NaturalParser::HistogramPreviewContext *ctx);
 
     antlrcpp::Any visitHistogramOptions(NaturalParser::HistogramOptionsContext *ctx);
 

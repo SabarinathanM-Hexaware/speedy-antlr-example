@@ -114,6 +114,11 @@ class NaturalParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by NaturalParser#storePreview2.
+    def visitStorePreview2(self, ctx:NaturalParser.StorePreview2Context):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by NaturalParser#storeCondition.
     def visitStoreCondition(self, ctx:NaturalParser.StoreConditionContext):
         return self.visitChildren(ctx)
@@ -124,8 +129,8 @@ class NaturalParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by NaturalParser#findOptions.
-    def visitFindOptions(self, ctx:NaturalParser.FindOptionsContext):
+    # Visit a parse tree produced by NaturalParser#findQuery.
+    def visitFindQuery(self, ctx:NaturalParser.FindQueryContext):
         return self.visitChildren(ctx)
 
 
@@ -134,8 +139,33 @@ class NaturalParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by NaturalParser#findPreview1.
+    def visitFindPreview1(self, ctx:NaturalParser.FindPreview1Context):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by NaturalParser#findPreview2.
+    def visitFindPreview2(self, ctx:NaturalParser.FindPreview2Context):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by NaturalParser#readStatement.
     def visitReadStatement(self, ctx:NaturalParser.ReadStatementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by NaturalParser#readQuery.
+    def visitReadQuery(self, ctx:NaturalParser.ReadQueryContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by NaturalParser#readPreview1.
+    def visitReadPreview1(self, ctx:NaturalParser.ReadPreview1Context):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by NaturalParser#readPreview2.
+    def visitReadPreview2(self, ctx:NaturalParser.ReadPreview2Context):
         return self.visitChildren(ctx)
 
 
@@ -181,6 +211,16 @@ class NaturalParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by NaturalParser#histogramStatement.
     def visitHistogramStatement(self, ctx:NaturalParser.HistogramStatementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by NaturalParser#histogramQuery.
+    def visitHistogramQuery(self, ctx:NaturalParser.HistogramQueryContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by NaturalParser#histogramPreview.
+    def visitHistogramPreview(self, ctx:NaturalParser.HistogramPreviewContext):
         return self.visitChildren(ctx)
 
 

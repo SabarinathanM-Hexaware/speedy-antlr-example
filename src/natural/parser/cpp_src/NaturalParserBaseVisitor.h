@@ -99,6 +99,10 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual std::any visitStorePreview2(NaturalParser::StorePreview2Context *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual std::any visitStoreCondition(NaturalParser::StoreConditionContext *ctx) override {
     return visitChildren(ctx);
   }
@@ -107,7 +111,7 @@ public:
     return visitChildren(ctx);
   }
 
-  virtual std::any visitFindOptions(NaturalParser::FindOptionsContext *ctx) override {
+  virtual std::any visitFindQuery(NaturalParser::FindQueryContext *ctx) override {
     return visitChildren(ctx);
   }
 
@@ -115,7 +119,27 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual std::any visitFindPreview1(NaturalParser::FindPreview1Context *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual std::any visitFindPreview2(NaturalParser::FindPreview2Context *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual std::any visitReadStatement(NaturalParser::ReadStatementContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual std::any visitReadQuery(NaturalParser::ReadQueryContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual std::any visitReadPreview1(NaturalParser::ReadPreview1Context *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual std::any visitReadPreview2(NaturalParser::ReadPreview2Context *ctx) override {
     return visitChildren(ctx);
   }
 
@@ -152,6 +176,14 @@ public:
   }
 
   virtual std::any visitHistogramStatement(NaturalParser::HistogramStatementContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual std::any visitHistogramQuery(NaturalParser::HistogramQueryContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual std::any visitHistogramPreview(NaturalParser::HistogramPreviewContext *ctx) override {
     return visitChildren(ctx);
   }
 

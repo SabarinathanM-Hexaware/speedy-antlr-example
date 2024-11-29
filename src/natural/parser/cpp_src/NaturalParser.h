@@ -63,18 +63,19 @@ public:
     ASCENDING = 229, DESCENDING = 230, OF = 231, MULTI_FETCH = 232, STARTING_FROM = 233, 
     ENDING_AT = 234, VARIABLE = 235, DYNAMIC = 236, SEQUENCE = 237, END_WORK = 238, 
     OFFSET = 239, FILLER = 240, ONCE = 241, AT_END_OF_FILE = 242, END_ENDFILE = 243, 
-    GT_TEXT = 244, LT_TEXT = 245, GE_TEXT = 246, LE_TEXT = 247, EQ_TEXT = 248, 
-    NE_TEXT = 249, AND_TEXT = 250, OR_TEXT = 251, NOT_TEXT = 252, AND_EQ = 253, 
-    OR_RQ = 254, OR_SRQ = 255, EQUAL = 256, NOTEQUAL = 257, EQUAL_TO = 258, 
-    LESS_THAN = 259, GREATER_THAN = 260, LESS_EQUAL = 261, GREATER_EQUAL = 262, 
-    STRING = 263, COLON = 264, LINE_NUMBER = 265, FLOAT = 266, LITERAL = 267, 
-    LINE_REF = 268, INPUT_PARAM = 269, DATE_CONSTANT = 270, H_CONSTANT = 271, 
-    PLUS = 272, MINUS = 273, MULT = 274, DIV = 275, EQ = 276, GT = 277, 
-    LT = 278, GE = 279, LE = 280, NE = 281, LPAREN = 282, RPAREN = 283, 
-    IDENTIFIER = 284, TRAILING_COMMENT = 285, WS = 286, NL = 287, WS_C = 288, 
-    NL_C = 289, COMMA = 290, MOD = 291, AND = 292, OR = 293, XOR = 294, 
-    NOT = 295, TILDE = 296, QUESTION = 297, DOT = 298, LBRACK = 299, RBRACK = 300, 
-    LBRACE = 301, RBRACE = 302, LABEL = 303
+    PASSWORD = 244, CIPHER = 245, FILE = 246, REPOSITION = 247, PHYSICAL = 248, 
+    STARTING = 249, ENDING = 250, AT = 251, AS = 252, GT_TEXT = 253, LT_TEXT = 254, 
+    GE_TEXT = 255, LE_TEXT = 256, EQ_TEXT = 257, NE_TEXT = 258, AND_TEXT = 259, 
+    OR_TEXT = 260, NOT_TEXT = 261, AND_EQ = 262, OR_RQ = 263, OR_SRQ = 264, 
+    EQUAL = 265, NOTEQUAL = 266, EQUAL_TO = 267, LESS_THAN = 268, GREATER_THAN = 269, 
+    LESS_EQUAL = 270, GREATER_EQUAL = 271, STRING = 272, COLON = 273, LINE_NUMBER = 274, 
+    FLOAT = 275, LITERAL = 276, LINE_REF = 277, INPUT_PARAM = 278, DATE_CONSTANT = 279, 
+    H_CONSTANT = 280, PLUS = 281, MINUS = 282, MULT = 283, DIV = 284, EQ = 285, 
+    GT = 286, LT = 287, GE = 288, LE = 289, NE = 290, LPAREN = 291, RPAREN = 292, 
+    IDENTIFIER = 293, TRAILING_COMMENT = 294, WS = 295, NL = 296, WS_C = 297, 
+    NL_C = 298, COMMA = 299, MOD = 300, AND = 301, OR = 302, XOR = 303, 
+    NOT = 304, TILDE = 305, QUESTION = 306, DOT = 307, LBRACK = 308, RBRACK = 309, 
+    LBRACE = 310, RBRACE = 311, LABEL = 312
   };
 
   enum {
@@ -84,31 +85,33 @@ public:
     RuleVariable = 10, RuleReinputStatement = 11, RuleReinputOptions = 12, 
     RuleSortStatement = 13, RuleExamineStatement = 14, RuleExamineOptions = 15, 
     RuleMoveStatement = 16, RuleMoveOptions = 17, RuleRepeatStatement = 18, 
-    RuleDoStatement = 19, RuleStoreStatement = 20, RuleStoreCondition = 21, 
-    RuleFindStatement = 22, RuleFindOptions = 23, RuleFindNumber = 24, RuleReadStatement = 25, 
-    RuleUpdateStatement = 26, RuleUpdateStartline = 27, RuleDeleteStatement = 28, 
-    RuleGetStatements = 29, RuleGetTabledStatements = 30, RuleGetTabledOptions = 31, 
-    RuleGetTransactionStatement = 32, RuleGetSameStatement = 33, RuleHistogramStatement = 34, 
-    RuleHistogramOptions = 35, RuleEndTransaction = 36, RuleBackoutTransaction = 37, 
-    RuleReadworkfileStatement = 38, RuleWorkfilenumberOption = 39, RuleReadworkfileOptions = 40, 
-    RuleAtEndOfFileStatement = 41, RuleWriteworkfileStatement = 42, RuleCloseworkfileStatement = 43, 
-    RuleNoRecordsFoundStatement = 44, RuleAtStartOfDataStatement = 45, RuleFormatStatement = 46, 
-    RuleFormatOptions = 47, RuleAssignmentStatement = 48, RuleIncludeStatement = 49, 
-    RuleRedefineStatement = 50, RuleRedefineBody = 51, RuleResetStatement = 52, 
-    RuleCallnatStatement = 53, RuleSetkeyStatement = 54, RulePerformStatement = 55, 
-    RuleSubroutineNames = 56, RuleFetchStatement = 57, RuleCallStatement = 58, 
-    RuleForStatement = 59, RuleAcceptRejectIfStatement = 60, RuleDecisionStatement = 61, 
-    RuleIfStatement = 62, RuleIfStructuredStatement = 63, RuleElseStructured = 64, 
-    RuleIfElseStatement = 65, RuleIfMultilinedStatement = 66, RuleIfSinglelinedStatement = 67, 
-    RuleElseMultilinedStatement = 68, RuleElseSinglelinedStatement = 69, 
-    RuleOnelinerBody = 70, RuleCondition = 71, RuleOptionalCondition = 72, 
-    RuleOperand = 73, RuleNaturalKeywords = 74, RuleLogicalOp = 75, RuleSubroutine = 76, 
-    RuleBlockContentSubroutine = 77, RuleSubroutineStatement = 78, RuleFunctionDefinition = 79, 
-    RuleBlockContent = 80, RuleValueAssignment = 81, RuleAssignStatement = 82, 
-    RuleAddOperation = 83, RuleMultiplyOperation = 84, RuleSubtractOperation = 85, 
-    RuleDivideOperation = 86, RuleComputeOperation = 87, RuleArithmaticOperation = 88, 
-    RuleOptionalCompute = 89, RuleCalculations = 90, RuleAddContent = 91, 
-    RuleCompOp = 92, RuleArithmaticOp = 93, RuleEndStatement = 94, RuleOtherStatement = 95
+    RuleDoStatement = 19, RuleStoreStatement = 20, RuleStorePreview2 = 21, 
+    RuleStoreCondition = 22, RuleFindStatement = 23, RuleFindQuery = 24, 
+    RuleFindNumber = 25, RuleFindPreview1 = 26, RuleFindPreview2 = 27, RuleReadStatement = 28, 
+    RuleReadQuery = 29, RuleReadPreview1 = 30, RuleReadPreview2 = 31, RuleUpdateStatement = 32, 
+    RuleUpdateStartline = 33, RuleDeleteStatement = 34, RuleGetStatements = 35, 
+    RuleGetTabledStatements = 36, RuleGetTabledOptions = 37, RuleGetTransactionStatement = 38, 
+    RuleGetSameStatement = 39, RuleHistogramStatement = 40, RuleHistogramQuery = 41, 
+    RuleHistogramPreview = 42, RuleHistogramOptions = 43, RuleEndTransaction = 44, 
+    RuleBackoutTransaction = 45, RuleReadworkfileStatement = 46, RuleWorkfilenumberOption = 47, 
+    RuleReadworkfileOptions = 48, RuleAtEndOfFileStatement = 49, RuleWriteworkfileStatement = 50, 
+    RuleCloseworkfileStatement = 51, RuleNoRecordsFoundStatement = 52, RuleAtStartOfDataStatement = 53, 
+    RuleFormatStatement = 54, RuleFormatOptions = 55, RuleAssignmentStatement = 56, 
+    RuleIncludeStatement = 57, RuleRedefineStatement = 58, RuleRedefineBody = 59, 
+    RuleResetStatement = 60, RuleCallnatStatement = 61, RuleSetkeyStatement = 62, 
+    RulePerformStatement = 63, RuleSubroutineNames = 64, RuleFetchStatement = 65, 
+    RuleCallStatement = 66, RuleForStatement = 67, RuleAcceptRejectIfStatement = 68, 
+    RuleDecisionStatement = 69, RuleIfStatement = 70, RuleIfStructuredStatement = 71, 
+    RuleElseStructured = 72, RuleIfElseStatement = 73, RuleIfMultilinedStatement = 74, 
+    RuleIfSinglelinedStatement = 75, RuleElseMultilinedStatement = 76, RuleElseSinglelinedStatement = 77, 
+    RuleOnelinerBody = 78, RuleCondition = 79, RuleOptionalCondition = 80, 
+    RuleOperand = 81, RuleNaturalKeywords = 82, RuleLogicalOp = 83, RuleSubroutine = 84, 
+    RuleBlockContentSubroutine = 85, RuleSubroutineStatement = 86, RuleFunctionDefinition = 87, 
+    RuleBlockContent = 88, RuleValueAssignment = 89, RuleAssignStatement = 90, 
+    RuleAddOperation = 91, RuleMultiplyOperation = 92, RuleSubtractOperation = 93, 
+    RuleDivideOperation = 94, RuleComputeOperation = 95, RuleArithmaticOperation = 96, 
+    RuleOptionalCompute = 97, RuleCalculations = 98, RuleAddContent = 99, 
+    RuleCompOp = 100, RuleArithmaticOp = 101, RuleEndStatement = 102, RuleOtherStatement = 103
   };
 
   explicit NaturalParser(antlr4::TokenStream *input);
@@ -149,11 +152,17 @@ public:
   class RepeatStatementContext;
   class DoStatementContext;
   class StoreStatementContext;
+  class StorePreview2Context;
   class StoreConditionContext;
   class FindStatementContext;
-  class FindOptionsContext;
+  class FindQueryContext;
   class FindNumberContext;
+  class FindPreview1Context;
+  class FindPreview2Context;
   class ReadStatementContext;
+  class ReadQueryContext;
+  class ReadPreview1Context;
+  class ReadPreview2Context;
   class UpdateStatementContext;
   class UpdateStartlineContext;
   class DeleteStatementContext;
@@ -163,6 +172,8 @@ public:
   class GetTransactionStatementContext;
   class GetSameStatementContext;
   class HistogramStatementContext;
+  class HistogramQueryContext;
+  class HistogramPreviewContext;
   class HistogramOptionsContext;
   class EndTransactionContext;
   class BackoutTransactionContext;
@@ -675,18 +686,24 @@ public:
 
   class  StoreStatementContext : public antlr4::ParserRuleContext {
   public:
+    antlr4::Token *tableName = nullptr;
     StoreStatementContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *STORE();
     antlr4::tree::TerminalNode *IDENTIFIER();
     std::vector<antlr4::tree::TerminalNode *> WS();
     antlr4::tree::TerminalNode* WS(size_t i);
-    antlr4::tree::TerminalNode *WITH();
-    antlr4::tree::TerminalNode *NL();
-    std::vector<StoreConditionContext *> storeCondition();
-    StoreConditionContext* storeCondition(size_t i);
     antlr4::tree::TerminalNode *RECORD();
     antlr4::tree::TerminalNode *IN();
+    antlr4::tree::TerminalNode *FILE();
+    std::vector<antlr4::tree::TerminalNode *> NL();
+    antlr4::tree::TerminalNode* NL(size_t i);
+    antlr4::tree::TerminalNode *WITH();
+    antlr4::tree::TerminalNode *SET();
+    std::vector<StorePreview2Context *> storePreview2();
+    StorePreview2Context* storePreview2(size_t i);
+    std::vector<StoreConditionContext *> storeCondition();
+    StoreConditionContext* storeCondition(size_t i);
 
 
     virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
@@ -695,19 +712,48 @@ public:
 
   StoreStatementContext* storeStatement();
 
+  class  StorePreview2Context : public antlr4::ParserRuleContext {
+  public:
+    StorePreview2Context(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *PASSWORD();
+    std::vector<antlr4::tree::TerminalNode *> WS();
+    antlr4::tree::TerminalNode* WS(size_t i);
+    antlr4::tree::TerminalNode *EQ();
+    antlr4::tree::TerminalNode *COLON();
+    OperandContext *operand();
+    antlr4::tree::TerminalNode *CIPHER();
+    antlr4::tree::TerminalNode *USING();
+    antlr4::tree::TerminalNode *GIVING();
+    antlr4::tree::TerminalNode *NUMBER();
+
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  StorePreview2Context* storePreview2();
+
   class  StoreConditionContext : public antlr4::ParserRuleContext {
   public:
     StoreConditionContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
-    OtherStatementContext *otherStatement();
-    antlr4::tree::TerminalNode *EQ();
-    antlr4::tree::TerminalNode *NL();
-    antlr4::tree::TerminalNode *IDENTIFIER();
-    antlr4::tree::TerminalNode *STRING();
-    antlr4::tree::TerminalNode *LINE_NUMBER();
+    std::vector<antlr4::tree::TerminalNode *> NL();
+    antlr4::tree::TerminalNode* NL(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> LINE_NUMBER();
+    antlr4::tree::TerminalNode* LINE_NUMBER(size_t i);
     std::vector<antlr4::tree::TerminalNode *> WS();
     antlr4::tree::TerminalNode* WS(size_t i);
-    antlr4::tree::TerminalNode *COLON();
+    std::vector<OperandContext *> operand();
+    OperandContext* operand(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> EQ();
+    antlr4::tree::TerminalNode* EQ(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> COLON();
+    antlr4::tree::TerminalNode* COLON(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> PLUS();
+    antlr4::tree::TerminalNode* PLUS(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> MINUS();
+    antlr4::tree::TerminalNode* MINUS(size_t i);
 
 
     virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
@@ -718,21 +764,14 @@ public:
 
   class  FindStatementContext : public antlr4::ParserRuleContext {
   public:
-    NaturalParser::BlockContentContext *findBody = nullptr;
     antlr4::Token *endBlock = nullptr;
     FindStatementContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
-    antlr4::tree::TerminalNode *FIND();
-    FindOptionsContext *findOptions();
+    FindQueryContext *findQuery();
     BlockContentContext *blockContent();
     antlr4::tree::TerminalNode *LOOP();
     antlr4::tree::TerminalNode *END_FIND();
-    std::vector<antlr4::tree::TerminalNode *> WS();
-    antlr4::tree::TerminalNode* WS(size_t i);
-    antlr4::tree::TerminalNode *NUMBER();
     FindNumberContext *findNumber();
-    OperandContext *operand();
-    antlr4::tree::TerminalNode *NL();
 
 
     virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
@@ -741,9 +780,58 @@ public:
 
   FindStatementContext* findStatement();
 
-  class  FindOptionsContext : public antlr4::ParserRuleContext {
+  class  FindQueryContext : public antlr4::ParserRuleContext {
   public:
-    FindOptionsContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    antlr4::Token *tableName = nullptr;
+    FindQueryContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *FIND();
+    FindPreview2Context *findPreview2();
+    std::vector<antlr4::tree::TerminalNode *> NL();
+    antlr4::tree::TerminalNode* NL(size_t i);
+    antlr4::tree::TerminalNode *IDENTIFIER();
+    std::vector<FindPreview1Context *> findPreview1();
+    FindPreview1Context* findPreview1(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> WS();
+    antlr4::tree::TerminalNode* WS(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> LINE_NUMBER();
+    antlr4::tree::TerminalNode* LINE_NUMBER(size_t i);
+
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  FindQueryContext* findQuery();
+
+  class  FindNumberContext : public antlr4::ParserRuleContext {
+  public:
+    antlr4::Token *tableName = nullptr;
+    FindNumberContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *FIND();
+    std::vector<antlr4::tree::TerminalNode *> WS();
+    antlr4::tree::TerminalNode* WS(size_t i);
+    antlr4::tree::TerminalNode *NUMBER();
+    FindPreview2Context *findPreview2();
+    std::vector<antlr4::tree::TerminalNode *> NL();
+    antlr4::tree::TerminalNode* NL(size_t i);
+    antlr4::tree::TerminalNode *IDENTIFIER();
+    std::vector<FindPreview1Context *> findPreview1();
+    FindPreview1Context* findPreview1(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> LINE_NUMBER();
+    antlr4::tree::TerminalNode* LINE_NUMBER(size_t i);
+
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  FindNumberContext* findNumber();
+
+  class  FindPreview1Context : public antlr4::ParserRuleContext {
+  public:
+    FindPreview1Context(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *FIRST();
     antlr4::tree::TerminalNode *UNIQUE_LEX();
@@ -751,17 +839,32 @@ public:
     antlr4::tree::TerminalNode *IDENTIFIER();
     antlr4::tree::TerminalNode *LINE_REF();
     VariableContext *variable();
+    antlr4::tree::TerminalNode *MULTI_FETCH();
+    std::vector<antlr4::tree::TerminalNode *> WS();
+    antlr4::tree::TerminalNode* WS(size_t i);
+    antlr4::tree::TerminalNode *LINE_NUMBER();
+    antlr4::tree::TerminalNode *OF();
+    antlr4::tree::TerminalNode *ON();
+    antlr4::tree::TerminalNode *OFF();
+    std::vector<antlr4::tree::TerminalNode *> RECORD();
+    antlr4::tree::TerminalNode* RECORD(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> RECORDS();
+    antlr4::tree::TerminalNode* RECORDS(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> IN();
+    antlr4::tree::TerminalNode* IN(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> FILE();
+    antlr4::tree::TerminalNode* FILE(size_t i);
 
 
     virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
-  FindOptionsContext* findOptions();
+  FindPreview1Context* findPreview1();
 
-  class  FindNumberContext : public antlr4::ParserRuleContext {
+  class  FindPreview2Context : public antlr4::ParserRuleContext {
   public:
-    FindNumberContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    FindPreview2Context(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     std::vector<OperandContext *> operand();
     OperandContext* operand(size_t i);
@@ -771,22 +874,26 @@ public:
     antlr4::tree::TerminalNode* LINE_NUMBER(size_t i);
     std::vector<antlr4::tree::TerminalNode *> NL();
     antlr4::tree::TerminalNode* NL(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> WHERE();
-    antlr4::tree::TerminalNode* WHERE(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> PASSWORD();
+    antlr4::tree::TerminalNode* PASSWORD(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> CIPHER();
+    antlr4::tree::TerminalNode* CIPHER(size_t i);
     std::vector<antlr4::tree::TerminalNode *> WITH();
     antlr4::tree::TerminalNode* WITH(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> STARTING_WITH();
-    antlr4::tree::TerminalNode* STARTING_WITH(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> LIMIT();
+    antlr4::tree::TerminalNode* LIMIT(size_t i);
     std::vector<antlr4::tree::TerminalNode *> COUPLED();
     antlr4::tree::TerminalNode* COUPLED(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> STARTING_WITH();
+    antlr4::tree::TerminalNode* STARTING_WITH(size_t i);
     std::vector<antlr4::tree::TerminalNode *> SORTED();
     antlr4::tree::TerminalNode* SORTED(size_t i);
     std::vector<antlr4::tree::TerminalNode *> BY();
     antlr4::tree::TerminalNode* BY(size_t i);
     std::vector<antlr4::tree::TerminalNode *> RETAIN_AS();
     antlr4::tree::TerminalNode* RETAIN_AS(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> MULTI_FETCH();
-    antlr4::tree::TerminalNode* MULTI_FETCH(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> WHERE();
+    antlr4::tree::TerminalNode* WHERE(size_t i);
     std::vector<antlr4::tree::TerminalNode *> VIA();
     antlr4::tree::TerminalNode* VIA(size_t i);
     std::vector<antlr4::tree::TerminalNode *> THRU();
@@ -799,12 +906,6 @@ public:
     antlr4::tree::TerminalNode* TO(size_t i);
     std::vector<antlr4::tree::TerminalNode *> FROM();
     antlr4::tree::TerminalNode* FROM(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> OF();
-    antlr4::tree::TerminalNode* OF(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> ON();
-    antlr4::tree::TerminalNode* ON(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> OFF();
-    antlr4::tree::TerminalNode* OFF(size_t i);
     std::vector<antlr4::tree::TerminalNode *> BY_NAME();
     antlr4::tree::TerminalNode* BY_NAME(size_t i);
     std::vector<antlr4::tree::TerminalNode *> BY_POSITION();
@@ -821,22 +922,17 @@ public:
    
   };
 
-  FindNumberContext* findNumber();
+  FindPreview2Context* findPreview2();
 
   class  ReadStatementContext : public antlr4::ParserRuleContext {
   public:
-    NaturalParser::BlockContentContext *readBody = nullptr;
     antlr4::Token *endBlock = nullptr;
     ReadStatementContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
-    antlr4::tree::TerminalNode *READ();
-    antlr4::tree::TerminalNode *IDENTIFIER();
-    antlr4::tree::TerminalNode *LINE_REF();
+    ReadQueryContext *readQuery();
     BlockContentContext *blockContent();
     antlr4::tree::TerminalNode *LOOP();
     antlr4::tree::TerminalNode *END_READ();
-    std::vector<antlr4::tree::TerminalNode *> WS();
-    antlr4::tree::TerminalNode* WS(size_t i);
 
 
     virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
@@ -844,6 +940,137 @@ public:
   };
 
   ReadStatementContext* readStatement();
+
+  class  ReadQueryContext : public antlr4::ParserRuleContext {
+  public:
+    antlr4::Token *tableName = nullptr;
+    ReadQueryContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *READ();
+    ReadPreview2Context *readPreview2();
+    std::vector<antlr4::tree::TerminalNode *> NL();
+    antlr4::tree::TerminalNode* NL(size_t i);
+    antlr4::tree::TerminalNode *IDENTIFIER();
+    std::vector<ReadPreview1Context *> readPreview1();
+    ReadPreview1Context* readPreview1(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> WS();
+    antlr4::tree::TerminalNode* WS(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> LINE_NUMBER();
+    antlr4::tree::TerminalNode* LINE_NUMBER(size_t i);
+
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  ReadQueryContext* readQuery();
+
+  class  ReadPreview1Context : public antlr4::ParserRuleContext {
+  public:
+    ReadPreview1Context(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *ALL();
+    antlr4::tree::TerminalNode *IDENTIFIER();
+    antlr4::tree::TerminalNode *LINE_REF();
+    VariableContext *variable();
+    antlr4::tree::TerminalNode *MULTI_FETCH();
+    std::vector<antlr4::tree::TerminalNode *> WS();
+    antlr4::tree::TerminalNode* WS(size_t i);
+    antlr4::tree::TerminalNode *LINE_NUMBER();
+    antlr4::tree::TerminalNode *OF();
+    antlr4::tree::TerminalNode *ON();
+    antlr4::tree::TerminalNode *OFF();
+    std::vector<antlr4::tree::TerminalNode *> RECORD();
+    antlr4::tree::TerminalNode* RECORD(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> RECORDS();
+    antlr4::tree::TerminalNode* RECORDS(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> IN();
+    antlr4::tree::TerminalNode* IN(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> FILE();
+    antlr4::tree::TerminalNode* FILE(size_t i);
+
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  ReadPreview1Context* readPreview1();
+
+  class  ReadPreview2Context : public antlr4::ParserRuleContext {
+  public:
+    ReadPreview2Context(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    std::vector<OperandContext *> operand();
+    OperandContext* operand(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> WS();
+    antlr4::tree::TerminalNode* WS(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> LINE_NUMBER();
+    antlr4::tree::TerminalNode* LINE_NUMBER(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> NL();
+    antlr4::tree::TerminalNode* NL(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> PASSWORD();
+    antlr4::tree::TerminalNode* PASSWORD(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> CIPHER();
+    antlr4::tree::TerminalNode* CIPHER(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> WITH();
+    antlr4::tree::TerminalNode* WITH(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> REPOSITION();
+    antlr4::tree::TerminalNode* REPOSITION(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> STARTING_WITH();
+    antlr4::tree::TerminalNode* STARTING_WITH(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> WHERE();
+    antlr4::tree::TerminalNode* WHERE(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> BY();
+    antlr4::tree::TerminalNode* BY(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> STARTING();
+    antlr4::tree::TerminalNode* STARTING(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> ENDING();
+    antlr4::tree::TerminalNode* ENDING(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> AT();
+    antlr4::tree::TerminalNode* AT(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> THRU();
+    antlr4::tree::TerminalNode* THRU(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> DESCENDING();
+    antlr4::tree::TerminalNode* DESCENDING(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> AND();
+    antlr4::tree::TerminalNode* AND(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> TO();
+    antlr4::tree::TerminalNode* TO(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> FROM();
+    antlr4::tree::TerminalNode* FROM(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> BY_NAME();
+    antlr4::tree::TerminalNode* BY_NAME(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> BY_POSITION();
+    antlr4::tree::TerminalNode* BY_POSITION(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> IN();
+    antlr4::tree::TerminalNode* IN(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> PHYSICAL();
+    antlr4::tree::TerminalNode* PHYSICAL(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> ASCENDING();
+    antlr4::tree::TerminalNode* ASCENDING(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> VARIABLE();
+    antlr4::tree::TerminalNode* VARIABLE(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> DYNAMIC();
+    antlr4::tree::TerminalNode* DYNAMIC(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> SEQUENCE();
+    antlr4::tree::TerminalNode* SEQUENCE(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> STARTING_FROM();
+    antlr4::tree::TerminalNode* STARTING_FROM(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> ENDING_AT();
+    antlr4::tree::TerminalNode* ENDING_AT(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> BUT();
+    antlr4::tree::TerminalNode* BUT(size_t i);
+    std::vector<CompOpContext *> compOp();
+    CompOpContext* compOp(size_t i);
+    std::vector<LogicalOpContext *> logicalOp();
+    LogicalOpContext* logicalOp(size_t i);
+
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  ReadPreview2Context* readPreview2();
 
   class  UpdateStatementContext : public antlr4::ParserRuleContext {
   public:
@@ -1005,12 +1232,10 @@ public:
 
   class  HistogramStatementContext : public antlr4::ParserRuleContext {
   public:
-    NaturalParser::HistogramOptionsContext *query = nullptr;
     antlr4::Token *endBlock = nullptr;
     HistogramStatementContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
-    antlr4::tree::TerminalNode *HISTOGRAM();
-    HistogramOptionsContext *histogramOptions();
+    HistogramQueryContext *histogramQuery();
     antlr4::tree::TerminalNode *END_HISTOGRAM();
     antlr4::tree::TerminalNode *LOOP();
     std::vector<StatementContext *> statement();
@@ -1022,6 +1247,57 @@ public:
   };
 
   HistogramStatementContext* histogramStatement();
+
+  class  HistogramQueryContext : public antlr4::ParserRuleContext {
+  public:
+    antlr4::Token *tableName = nullptr;
+    HistogramQueryContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *HISTOGRAM();
+    HistogramOptionsContext *histogramOptions();
+    antlr4::tree::TerminalNode *IDENTIFIER();
+    std::vector<antlr4::tree::TerminalNode *> WS();
+    antlr4::tree::TerminalNode* WS(size_t i);
+    std::vector<HistogramPreviewContext *> histogramPreview();
+    HistogramPreviewContext* histogramPreview(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> NL();
+    antlr4::tree::TerminalNode* NL(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> LINE_NUMBER();
+    antlr4::tree::TerminalNode* LINE_NUMBER(size_t i);
+
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  HistogramQueryContext* histogramQuery();
+
+  class  HistogramPreviewContext : public antlr4::ParserRuleContext {
+  public:
+    HistogramPreviewContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *FIRST();
+    antlr4::tree::TerminalNode *UNIQUE_LEX();
+    antlr4::tree::TerminalNode *ALL();
+    antlr4::tree::TerminalNode *LINE_REF();
+    antlr4::tree::TerminalNode *MULTI_FETCH();
+    std::vector<antlr4::tree::TerminalNode *> WS();
+    antlr4::tree::TerminalNode* WS(size_t i);
+    antlr4::tree::TerminalNode *LINE_NUMBER();
+    antlr4::tree::TerminalNode *OF();
+    antlr4::tree::TerminalNode *ON();
+    antlr4::tree::TerminalNode *OFF();
+    std::vector<antlr4::tree::TerminalNode *> IN();
+    antlr4::tree::TerminalNode* IN(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> FILE();
+    antlr4::tree::TerminalNode* FILE(size_t i);
+
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  HistogramPreviewContext* histogramPreview();
 
   class  HistogramOptionsContext : public antlr4::ParserRuleContext {
   public:
@@ -1037,6 +1313,8 @@ public:
     antlr4::tree::TerminalNode* LINE_NUMBER(size_t i);
     std::vector<antlr4::tree::TerminalNode *> NL();
     antlr4::tree::TerminalNode* NL(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> PASSWORD();
+    antlr4::tree::TerminalNode* PASSWORD(size_t i);
     std::vector<antlr4::tree::TerminalNode *> ALL();
     antlr4::tree::TerminalNode* ALL(size_t i);
     std::vector<antlr4::tree::TerminalNode *> FROM();
@@ -1069,14 +1347,14 @@ public:
     antlr4::tree::TerminalNode* DYNAMIC(size_t i);
     std::vector<antlr4::tree::TerminalNode *> SEQUENCE();
     antlr4::tree::TerminalNode* SEQUENCE(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> STARTING();
+    antlr4::tree::TerminalNode* STARTING(size_t i);
     std::vector<antlr4::tree::TerminalNode *> STARTING_WITH();
     antlr4::tree::TerminalNode* STARTING_WITH(size_t i);
     std::vector<antlr4::tree::TerminalNode *> STARTING_FROM();
     antlr4::tree::TerminalNode* STARTING_FROM(size_t i);
     std::vector<antlr4::tree::TerminalNode *> ENDING_AT();
     antlr4::tree::TerminalNode* ENDING_AT(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> MULTI_FETCH();
-    antlr4::tree::TerminalNode* MULTI_FETCH(size_t i);
     std::vector<antlr4::tree::TerminalNode *> WHERE();
     antlr4::tree::TerminalNode* WHERE(size_t i);
     std::vector<CompOpContext *> compOp();

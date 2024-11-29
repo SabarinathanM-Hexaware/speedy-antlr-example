@@ -32,11 +32,17 @@ SA_NaturalTranslator::~SA_NaturalTranslator() {
     Py_XDECREF(RepeatStatementContext_cls);
     Py_XDECREF(DoStatementContext_cls);
     Py_XDECREF(StoreStatementContext_cls);
+    Py_XDECREF(StorePreview2Context_cls);
     Py_XDECREF(StoreConditionContext_cls);
     Py_XDECREF(FindStatementContext_cls);
-    Py_XDECREF(FindOptionsContext_cls);
+    Py_XDECREF(FindQueryContext_cls);
     Py_XDECREF(FindNumberContext_cls);
+    Py_XDECREF(FindPreview1Context_cls);
+    Py_XDECREF(FindPreview2Context_cls);
     Py_XDECREF(ReadStatementContext_cls);
+    Py_XDECREF(ReadQueryContext_cls);
+    Py_XDECREF(ReadPreview1Context_cls);
+    Py_XDECREF(ReadPreview2Context_cls);
     Py_XDECREF(UpdateStatementContext_cls);
     Py_XDECREF(UpdateStartlineContext_cls);
     Py_XDECREF(DeleteStatementContext_cls);
@@ -46,6 +52,8 @@ SA_NaturalTranslator::~SA_NaturalTranslator() {
     Py_XDECREF(GetTransactionStatementContext_cls);
     Py_XDECREF(GetSameStatementContext_cls);
     Py_XDECREF(HistogramStatementContext_cls);
+    Py_XDECREF(HistogramQueryContext_cls);
+    Py_XDECREF(HistogramPreviewContext_cls);
     Py_XDECREF(HistogramOptionsContext_cls);
     Py_XDECREF(EndTransactionContext_cls);
     Py_XDECREF(BackoutTransactionContext_cls);
@@ -231,8 +239,17 @@ antlrcpp::Any SA_NaturalTranslator::visitDoStatement(NaturalParser::DoStatementC
 }
 
 antlrcpp::Any SA_NaturalTranslator::visitStoreStatement(NaturalParser::StoreStatementContext *ctx){
+    speedy_antlr::LabelMap labels[] = {
+        {"tableName", static_cast<void*>(ctx->tableName)}
+    };
     if(!StoreStatementContext_cls) StoreStatementContext_cls = PyObject_GetAttrString(translator->parser_cls, "StoreStatementContext");
-    PyObject *py_ctx = translator->convert_ctx(this, ctx, StoreStatementContext_cls);
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, StoreStatementContext_cls, labels, 1);
+    return py_ctx;
+}
+
+antlrcpp::Any SA_NaturalTranslator::visitStorePreview2(NaturalParser::StorePreview2Context *ctx){
+    if(!StorePreview2Context_cls) StorePreview2Context_cls = PyObject_GetAttrString(translator->parser_cls, "StorePreview2Context");
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, StorePreview2Context_cls);
     return py_ctx;
 }
 
@@ -244,33 +261,70 @@ antlrcpp::Any SA_NaturalTranslator::visitStoreCondition(NaturalParser::StoreCond
 
 antlrcpp::Any SA_NaturalTranslator::visitFindStatement(NaturalParser::FindStatementContext *ctx){
     speedy_antlr::LabelMap labels[] = {
-        {"findBody", static_cast<void*>(ctx->findBody)},
         {"endBlock", static_cast<void*>(ctx->endBlock)}
     };
     if(!FindStatementContext_cls) FindStatementContext_cls = PyObject_GetAttrString(translator->parser_cls, "FindStatementContext");
-    PyObject *py_ctx = translator->convert_ctx(this, ctx, FindStatementContext_cls, labels, 2);
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, FindStatementContext_cls, labels, 1);
     return py_ctx;
 }
 
-antlrcpp::Any SA_NaturalTranslator::visitFindOptions(NaturalParser::FindOptionsContext *ctx){
-    if(!FindOptionsContext_cls) FindOptionsContext_cls = PyObject_GetAttrString(translator->parser_cls, "FindOptionsContext");
-    PyObject *py_ctx = translator->convert_ctx(this, ctx, FindOptionsContext_cls);
+antlrcpp::Any SA_NaturalTranslator::visitFindQuery(NaturalParser::FindQueryContext *ctx){
+    speedy_antlr::LabelMap labels[] = {
+        {"tableName", static_cast<void*>(ctx->tableName)}
+    };
+    if(!FindQueryContext_cls) FindQueryContext_cls = PyObject_GetAttrString(translator->parser_cls, "FindQueryContext");
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, FindQueryContext_cls, labels, 1);
     return py_ctx;
 }
 
 antlrcpp::Any SA_NaturalTranslator::visitFindNumber(NaturalParser::FindNumberContext *ctx){
+    speedy_antlr::LabelMap labels[] = {
+        {"tableName", static_cast<void*>(ctx->tableName)}
+    };
     if(!FindNumberContext_cls) FindNumberContext_cls = PyObject_GetAttrString(translator->parser_cls, "FindNumberContext");
-    PyObject *py_ctx = translator->convert_ctx(this, ctx, FindNumberContext_cls);
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, FindNumberContext_cls, labels, 1);
+    return py_ctx;
+}
+
+antlrcpp::Any SA_NaturalTranslator::visitFindPreview1(NaturalParser::FindPreview1Context *ctx){
+    if(!FindPreview1Context_cls) FindPreview1Context_cls = PyObject_GetAttrString(translator->parser_cls, "FindPreview1Context");
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, FindPreview1Context_cls);
+    return py_ctx;
+}
+
+antlrcpp::Any SA_NaturalTranslator::visitFindPreview2(NaturalParser::FindPreview2Context *ctx){
+    if(!FindPreview2Context_cls) FindPreview2Context_cls = PyObject_GetAttrString(translator->parser_cls, "FindPreview2Context");
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, FindPreview2Context_cls);
     return py_ctx;
 }
 
 antlrcpp::Any SA_NaturalTranslator::visitReadStatement(NaturalParser::ReadStatementContext *ctx){
     speedy_antlr::LabelMap labels[] = {
-        {"readBody", static_cast<void*>(ctx->readBody)},
         {"endBlock", static_cast<void*>(ctx->endBlock)}
     };
     if(!ReadStatementContext_cls) ReadStatementContext_cls = PyObject_GetAttrString(translator->parser_cls, "ReadStatementContext");
-    PyObject *py_ctx = translator->convert_ctx(this, ctx, ReadStatementContext_cls, labels, 2);
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, ReadStatementContext_cls, labels, 1);
+    return py_ctx;
+}
+
+antlrcpp::Any SA_NaturalTranslator::visitReadQuery(NaturalParser::ReadQueryContext *ctx){
+    speedy_antlr::LabelMap labels[] = {
+        {"tableName", static_cast<void*>(ctx->tableName)}
+    };
+    if(!ReadQueryContext_cls) ReadQueryContext_cls = PyObject_GetAttrString(translator->parser_cls, "ReadQueryContext");
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, ReadQueryContext_cls, labels, 1);
+    return py_ctx;
+}
+
+antlrcpp::Any SA_NaturalTranslator::visitReadPreview1(NaturalParser::ReadPreview1Context *ctx){
+    if(!ReadPreview1Context_cls) ReadPreview1Context_cls = PyObject_GetAttrString(translator->parser_cls, "ReadPreview1Context");
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, ReadPreview1Context_cls);
+    return py_ctx;
+}
+
+antlrcpp::Any SA_NaturalTranslator::visitReadPreview2(NaturalParser::ReadPreview2Context *ctx){
+    if(!ReadPreview2Context_cls) ReadPreview2Context_cls = PyObject_GetAttrString(translator->parser_cls, "ReadPreview2Context");
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, ReadPreview2Context_cls);
     return py_ctx;
 }
 
@@ -328,11 +382,25 @@ antlrcpp::Any SA_NaturalTranslator::visitGetSameStatement(NaturalParser::GetSame
 
 antlrcpp::Any SA_NaturalTranslator::visitHistogramStatement(NaturalParser::HistogramStatementContext *ctx){
     speedy_antlr::LabelMap labels[] = {
-        {"query", static_cast<void*>(ctx->query)},
         {"endBlock", static_cast<void*>(ctx->endBlock)}
     };
     if(!HistogramStatementContext_cls) HistogramStatementContext_cls = PyObject_GetAttrString(translator->parser_cls, "HistogramStatementContext");
-    PyObject *py_ctx = translator->convert_ctx(this, ctx, HistogramStatementContext_cls, labels, 2);
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, HistogramStatementContext_cls, labels, 1);
+    return py_ctx;
+}
+
+antlrcpp::Any SA_NaturalTranslator::visitHistogramQuery(NaturalParser::HistogramQueryContext *ctx){
+    speedy_antlr::LabelMap labels[] = {
+        {"tableName", static_cast<void*>(ctx->tableName)}
+    };
+    if(!HistogramQueryContext_cls) HistogramQueryContext_cls = PyObject_GetAttrString(translator->parser_cls, "HistogramQueryContext");
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, HistogramQueryContext_cls, labels, 1);
+    return py_ctx;
+}
+
+antlrcpp::Any SA_NaturalTranslator::visitHistogramPreview(NaturalParser::HistogramPreviewContext *ctx){
+    if(!HistogramPreviewContext_cls) HistogramPreviewContext_cls = PyObject_GetAttrString(translator->parser_cls, "HistogramPreviewContext");
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, HistogramPreviewContext_cls);
     return py_ctx;
 }
 

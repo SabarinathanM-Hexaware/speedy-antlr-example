@@ -12,7 +12,6 @@ lineNumberStatement
     ;
 
 statement
-
     : label? (dataDefinition
     | subroutine
     | functionDefinition
@@ -177,39 +176,79 @@ doStatement
     ;
 
 storeStatement
-    : STORE WS? IDENTIFIER WS? WITH? WS? NL? storeCondition*
-    | STORE WS? RECORD WS? IN? WS? IDENTIFIER WS? WITH? WS? NL? storeCondition*
+    //: STORE WS? IDENTIFIER WS? WITH? WS? NL? storeCondition*
+    : STORE WS? RECORD? WS? IN? WS? FILE? WS? tableName=IDENTIFIER WS? NL? WITH? SET? WS? NL? storePreview2* WS? NL? storeCondition*
+    ;
+
+storePreview2
+    : PASSWORD WS COLON? EQ WS? operand?
+    | CIPHER WS COLON? EQ WS? operand?
+    | (USING|GIVING) WS? NUMBER? operand?
     ;
 
 storeCondition
-    : (LINE_NUMBER WS)? otherStatement WS? COLON? EQ WS? (IDENTIFIER | STRING) WS* NL
-//    | (LINE_NUMBER WS)? END_TRANSACTION WS* NL*
+    :  (LINE_NUMBER)? WS*? (operand WS? NL? LINE_NUMBER? COLON? NL? LINE_NUMBER? WS? EQ WS? NL? LINE_NUMBER? WS*? (PLUS|MINUS)? operand WS? NL?)* WS* NL
     ;
 
 findStatement
-    : FIND WS? findOptions WS? findBody=blockContent endBlock=(LOOP | END_FIND)
-    | FIND WS NUMBER WS findNumber operand WS? NL
+    // : FIND WS? findOptions WS? findBody=blockContent endBlock=(LOOP | END_FIND)
+    : findQuery blockContent endBlock=(LOOP | END_FIND)
+    | findNumber
     ;
 
-findOptions
-    : FIRST
-    | UNIQUE_LEX
-    | ALL
-    | IDENTIFIER
-    | LINE_REF
-    | variable
+findQuery
+    : FIND (findPreview1 | WS | NL | LINE_NUMBER)* tableName=IDENTIFIER WS? findPreview2 NL
     ;
 
 findNumber
-    : (operand | WS | LINE_NUMBER | NL                                                          // variables & values
-    | WHERE | WITH | STARTING_WITH | COUPLED | SORTED | BY | RETAIN_AS | MULTI_FETCH            // clauses
-    | VIA | THRU | DESCENDING | AND | TO | FROM | OF | ON | OFF | BY_NAME | BY_POSITION         // keywords
-    | BUT | compOp | logicalOp                                                                  // operators
+    : FIND WS NUMBER (findPreview1 | WS | NL | LINE_NUMBER)* tableName=IDENTIFIER WS? findPreview2 NL
+    ;
+
+findPreview1
+    : (FIRST | UNIQUE_LEX | ALL | IDENTIFIER | LINE_REF | variable)
+    | MULTI_FETCH (WS ( OF | ON | OFF ))? WS LINE_NUMBER
+    | (RECORD | RECORDS | IN | FILE)+
+    ;
+
+findPreview2
+// Below is the line wise capturing of every clause. Keeping it in comments for the reference of other use cases.
+//    : PASSWORD WS COLON? EQ WS? operand
+//    | CIPHER WS COLON? EQ WS? operand
+//    | WITH (LIMIT WS operand)? WS (condition | THRU | BUT | operand | WS | NL | LINE_NUMBER)*
+//    | COUPLED (TO | FILE | WS | NL | LINE_NUMBER | VIA | operand EQ | EQ_TEXT | EQUAL | EQUAL_TO )* operand
+//    | STARTING_WITH (WS | NL | LINE_NUMBER | operand | EQ)* operand
+//    | SORTED (WS BY)? (WS | NL | LINE_NUMBER)* operand (WS | NL | LINE_NUMBER)* DESCENDING?
+//    | RETAIN_AS WS operand
+//    | WHERE condition
+//    | compOp | logicalOp
+    : (operand | WS | LINE_NUMBER | NL                                                                      // variables & values
+    | PASSWORD | CIPHER | WITH | LIMIT | COUPLED | STARTING_WITH | SORTED | BY | RETAIN_AS | WHERE          // clauses
+    | VIA | THRU | DESCENDING | AND | TO | FROM | BY_NAME | BY_POSITION                                     // keywords
+    | BUT | compOp | logicalOp                                                                              // operators
     )*
     ;
 
 readStatement
-    : READ WS? (IDENTIFIER | LINE_REF) WS?  readBody=blockContent endBlock=(LOOP | END_READ)
+    : readQuery blockContent endBlock=(LOOP | END_READ)
+    ;
+
+readQuery
+    : READ (readPreview1 | WS | NL | LINE_NUMBER)* tableName=IDENTIFIER WS? readPreview2 NL
+    ;
+
+readPreview1
+    : ( ALL | IDENTIFIER | LINE_REF | variable)
+    | MULTI_FETCH (WS ( OF | ON | OFF ))? WS LINE_NUMBER
+    | (RECORD | RECORDS | IN | FILE)+
+    ;
+
+readPreview2
+    : (operand | WS | LINE_NUMBER | NL                                                                      // variables & values
+    | PASSWORD | CIPHER | WITH | REPOSITION | STARTING_WITH | WHERE          // clauses
+    | BY | STARTING | ENDING | AT | THRU | DESCENDING | AND | TO | FROM | BY_NAME | BY_POSITION
+    | IN | PHYSICAL | ASCENDING |VARIABLE | DYNAMIC | SEQUENCE | STARTING_FROM | ENDING_AT                                // keywords
+    | BUT | compOp | logicalOp                                                                              // operators
+    )*
     ;
 
 updateStatement
@@ -250,14 +289,25 @@ getSameStatement
     ;
 
 histogramStatement
-    : HISTOGRAM query=histogramOptions statement* endBlock=(END_HISTOGRAM | LOOP)
+    : histogramQuery statement* endBlock=(END_HISTOGRAM | LOOP)
+    ;
+
+histogramQuery
+    //: HISTOGRAM_LINE_REF WS* histogramPreview? tableName=IDENTIFIER WS* NL? histogramOptions
+    : HISTOGRAM WS? (histogramPreview | WS | NL | LINE_NUMBER)* tableName=IDENTIFIER WS* NL? histogramOptions
+    ;
+
+histogramPreview
+    : (FIRST | UNIQUE_LEX | ALL | LINE_REF)
+    | MULTI_FETCH (WS ( OF | ON | OFF ))? WS LINE_NUMBER
+    | (IN | FILE)+
     ;
 
 histogramOptions
-    : (operand | LINE_REF | WS | LINE_NUMBER | NL
+    : (operand | LINE_REF | WS | LINE_NUMBER | NL | PASSWORD
     | ALL | FROM | WITH | THRU | IN | VALUE | FOR | FIELD | ON | OFF | OF
-    | ASCENDING | DESCENDING | VARIABLE | DYNAMIC | SEQUENCE
-    | STARTING_WITH | STARTING_FROM | ENDING_AT | MULTI_FETCH | WHERE
+    | ASCENDING | DESCENDING | VARIABLE | DYNAMIC | SEQUENCE | STARTING
+    | STARTING_WITH | STARTING_FROM | ENDING_AT | WHERE
     | compOp | logicalOp)* operand
     ;
 
@@ -360,7 +410,7 @@ fetchStatement
     ;
 
 callStatement
-    : CALL (WS INTERFACE4)? WS? subprogramName=STRING (WS? USING)? ((WS | NL | LINE_NUMBER)* (IDENTIFIER | STRING))* NL
+    : CALL (WS INTERFACE4)? WS? subprogramName=STRING (WS? USING)? ((WS | NL | LINE_NUMBER)* (IDENTIFIER | STRING))* WS? NL
     ;
 
 forStatement
