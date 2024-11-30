@@ -311,7 +311,7 @@ NE: '!=';
 LPAREN: '(';
 RPAREN: ')';
 
-IDENTIFIER: (NESTED_PARENS | '*'? '#'? [a-zA-Z0-9_][a-zA-Z0-9-/:]*)+;
+IDENTIFIER: (NESTED_PARENS | '*'? '#'? '+'? [a-zA-Z0-9_][a-zA-Z0-9-/:]*)+;
 
 fragment NESTED_PARENS: '(' (NESTED_PARENS | ~[()])* ')';
 
